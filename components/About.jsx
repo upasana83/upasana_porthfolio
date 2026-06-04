@@ -52,7 +52,7 @@ export default function About() {
                 Who I Am
               </h3>
               <p className="text-white/70 leading-relaxed">
-                I'm <span className="text-transparent bg-gradient-to-r from-[#7030EF] to-[#DB1FFF] bg-clip-text font-semibold">Upasana Patil</span>, 
+                I&apos;m <span className="text-transparent bg-gradient-to-r from-[#7030EF] to-[#DB1FFF] bg-clip-text font-semibold">Upasana Patil</span>, 
                 a passionate MERN Stack Developer with a keen eye for creating exceptional digital experiences. 
                 I specialize in building full-stack web applications that are not only visually stunning 
                 but also performant, scalable, and user-centric.
@@ -138,7 +138,7 @@ export default function About() {
         <div className="mt-12 text-center">
           <div className="inline-block bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
             <p className="text-white/60 italic">
-              "Turning complex problems into simple, elegant solutions through code."
+              &quot;Turning complex problems into simple, elegant solutions through code.&quot;
             </p>
             <div className="mt-2 text-transparent bg-gradient-to-r from-[#7030EF] to-[#DB1FFF] bg-clip-text font-medium">
               — Upasana Patil
