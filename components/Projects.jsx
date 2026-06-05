@@ -2,43 +2,56 @@
 
 // Move the projects data inside the component file or import it correctly
 const projects = [
-  {
-    title: "Ed-Rho Platform",
-    tech: "Next.js, React, TailwindCSS, Node.js",
-    description: "An educational platform with modern UI/UX design principles, featuring responsive layouts and interactive learning components.",
-    live: "https://ed-rho-three.vercel.app/",
-    github: "https://github.com/Prathamesh0008/ed_upasana.git",
-    icon: "📚"
-  },
+  // {
+  //   title: "Ed-Rho Platform",
+  //   tech: "Next.js, React, TailwindCSS, Node.js",
+  //   description:
+  //     "An educational platform with modern UI/UX design principles, featuring responsive layouts and interactive learning components.",
+  //   live: "https://ed-rho-three.vercel.app/",
+  //   github: "https://github.com/Prathamesh0008/ed_upasana.git",
+  //   icon: "📚",
+  // },
   {
     title: "BioPeptide Science",
     tech: "React, TailwindCSS, Framer Motion",
-    description: "Scientific/peptide research website with sleek animations and professional design, showcasing biotechnological innovations.",
-    live: "https://biopeptide-sci.vercel.app/",
-    icon: "🧬"
+    description:
+      "Scientific and biotechnology website showcasing peptide research, products, and innovations with a professional user experience.",
+    live: "https://www.bio-peptides.com/",
+    icon: "🧬",
   },
   {
     title: "Tech Next",
     tech: "Next.js, TypeScript, TailwindCSS",
-    description: "Modern technology showcase website with cutting-edge design patterns and responsive architecture.",
-    live: "https://tech-next-three.vercel.app/",
-    icon: "💻"
+    description:
+      "Modern technology showcase website with cutting-edge design patterns and responsive architecture.",
+    live: "https://share.google/RHz1dzIm1F2JVo9wY",
+    icon: "💻",
   },
   {
     title: "KVA Logistics",
-    tech: "React, TailwindCSS, Maps Integration",
-    description: "Logistics and supply chain management platform with real-time tracking capabilities and service showcase.",
-    live: "https://kva-logistics.vercel.app/",
-    icon: "🚚"
+    tech: "Web Development, Responsive Design",
+    description:
+      "Professional logistics and transportation company website showcasing services, operations, and global logistics solutions.",
+    live: "https://www.kvalogistics.nl/",
+    icon: "🚚",
+  },
+  {
+    title: "Novatech Science",
+    tech: "Web Development, Corporate Website",
+    description:
+      "Corporate website developed for Novatech Science with modern design, responsive layouts, and business-focused content.",
+    live: "https://www.novatechscience.com/",
+    icon: "🔬",
   },
   {
     title: "Portfolio Website",
     tech: "Next.js, TailwindCSS, Framer Motion",
-    description: "Personal portfolio website showcasing projects and skills with smooth animations and gradient effects.",
-    live: "#",
+    description:
+      "Personal portfolio website showcasing projects, technical skills, and professional experience.",
+    live: "https://upasanaporthfolio-qjkjhspkv-upasana-patil-s-projects.vercel.app/",
     github: "https://github.com/Prathamesh0008/ed_upasana.git",
-    icon: "👩‍💻"
-  }
+    icon: "👩‍💻",
+  },
 ];
 
 export default function Projects() {

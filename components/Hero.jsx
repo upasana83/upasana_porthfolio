@@ -66,7 +66,7 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative flex min-h-screen items-center overflow-hidden bg-[#090820] pt-24"
+      className="relative flex min-h-screen items-center overflow-hidden bg-[#090820] pt-20 sm:pt-24"
     >
       <div className="absolute left-0 top-0 h-96 w-96 -translate-x-1/2 -translate-y-1/2 rounded-full bg-gradient-to-r from-[#7030EF]/20 to-[#DB1FFF]/20 blur-3xl"></div>
       <div className="absolute bottom-0 right-0 h-96 w-96 translate-x-1/2 translate-y-1/2 rounded-full bg-gradient-to-l from-[#DB1FFF]/20 to-[#7030EF]/20 blur-3xl"></div>
@@ -81,31 +81,31 @@ export default function Hero() {
         }}
       ></div>
 
-      <div className="relative z-10 mx-auto w-full max-w-7xl px-4 py-12 sm:px-6 md:py-20 lg:px-8">
-        <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-20">
-          <div className="order-2 text-left lg:order-1">
-            <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 backdrop-blur-sm">
+      <div className="relative z-10 mx-auto w-full max-w-7xl px-4 py-5 sm:px-6 sm:py-12 md:py-20 lg:px-8">
+        <div className="grid grid-cols-1 items-center gap-4 sm:gap-10 lg:grid-cols-2 lg:gap-20">
+          <div className="order-1 text-left">
+            <div className="mb-2 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1.5 backdrop-blur-sm sm:mb-6 sm:px-4 sm:py-2">
               <span className="h-2 w-2 animate-pulse rounded-full bg-green-500"></span>
-              <span className="text-sm font-medium text-white/70">
+              <span className="text-xs font-medium text-white/70 sm:text-sm">
                 Available for work
               </span>
             </div>
 
-            <div className="mb-4">
-              <span className="text-sm font-medium uppercase tracking-wider text-white/50 md:text-base">
+            <div className="mb-1.5 sm:mb-4">
+              <span className="text-xs font-medium uppercase tracking-wider text-white/50 sm:text-sm md:text-base">
                 Welcome to my portfolio
               </span>
             </div>
 
-            <h1 className="mb-4 text-4xl font-bold md:text-5xl lg:text-7xl">
+            <h1 className="mb-2 text-[2rem] font-bold leading-tight max-[380px]:pr-[118px] max-[380px]:text-[1.65rem] sm:mb-4 sm:text-4xl md:text-5xl lg:text-7xl">
               <span className="text-white">Hi, I&apos;m </span>
               <span className="bg-gradient-to-r from-[#7030EF] to-[#DB1FFF] bg-clip-text text-transparent">
                 Upasana Patil
               </span>
             </h1>
 
-            <div className="mb-6 min-h-12">
-              <p className="text-xl font-medium text-white/80 md:text-2xl">
+            <div className="mb-2 min-h-8 max-[380px]:pr-[118px] sm:mb-6 sm:min-h-12">
+              <p className="text-base font-medium leading-snug text-white/80 sm:text-xl md:text-2xl">
                 I&apos;m a{" "}
                 <span className="bg-gradient-to-r from-[#7030EF] to-[#DB1FFF] bg-clip-text font-semibold text-transparent">
                   {typedText}
@@ -114,22 +114,23 @@ export default function Hero() {
               </p>
             </div>
 
-            <div className="mb-8 flex max-w-xl items-start gap-3">
-              <div className="mt-1 text-[#DB1FFF]">
-                <FiInfo className="h-5 w-5" aria-hidden="true" />
+            <div className="mb-3 flex max-w-xl items-start gap-2 sm:mb-8 sm:gap-3">
+              <div className="mt-1 shrink-0 text-[#DB1FFF]">
+                <FiInfo className="h-4 w-4 sm:h-5 sm:w-5" aria-hidden="true" />
               </div>
-              <p className="text-base leading-relaxed text-white/60 md:text-lg">
-                MCA Graduate with{" "}
-                <span className="font-semibold text-white">CGPA of 7.78</span>,
-                passionate about creating beautiful, responsive web applications
-                with clean code and exceptional user experiences.
-              </p>
+             <p className="text-sm leading-relaxed text-white/60 max-[380px]:line-clamp-3 sm:text-base md:text-lg">
+  Currently working as a{" "}
+  <span className="font-semibold text-white">MERN Stack Developer</span>,
+  specializing in building scalable web applications using React,
+  Next.js, Node.js, Express.js, and MongoDB with a strong focus on
+  performance, user experience, and clean architecture.
+</p>
             </div>
 
-            <div className="mb-8 flex flex-wrap gap-4">
+            <div className="mb-0 flex flex-wrap gap-3 sm:mb-8 sm:gap-4">
               <Link
                 href="#contact"
-                className="group flex items-center gap-2 rounded-lg bg-gradient-to-r from-[#7030EF] to-[#DB1FFF] px-8 py-3 font-medium text-white transition-all duration-300 hover:shadow-lg hover:shadow-[#7030EF]/25"
+                className="group flex items-center gap-2 rounded-lg bg-gradient-to-r from-[#7030EF] to-[#DB1FFF] px-5 py-2.5 text-sm font-medium text-white transition-all duration-300 hover:shadow-lg hover:shadow-[#7030EF]/25 sm:px-8 sm:py-3 sm:text-base"
               >
                 <span>Let&apos;s Connect</span>
                 <FiArrowRight
@@ -139,14 +140,14 @@ export default function Hero() {
               </Link>
               <Link
                 href="#projects"
-                className="group flex items-center gap-2 rounded-lg border border-white/10 bg-white/5 px-8 py-3 font-medium text-white/80 backdrop-blur-sm transition-all duration-300 hover:border-[#7030EF]/30 hover:bg-white/10"
+                className="group flex items-center gap-2 rounded-lg border border-white/10 bg-white/5 px-5 py-2.5 text-sm font-medium text-white/80 backdrop-blur-sm transition-all duration-300 hover:border-[#7030EF]/30 hover:bg-white/10 sm:px-8 sm:py-3 sm:text-base"
               >
                 <span>View Projects</span>
                 <FiBriefcase className="h-4 w-4" aria-hidden="true" />
               </Link>
             </div>
 
-            <div className="flex items-center gap-4">
+            <div className="hidden items-center gap-4 sm:flex">
               <span className="text-sm text-white/40">Find me on:</span>
               {socials.map((social) => {
                 const Icon = social.icon;
@@ -165,12 +166,12 @@ export default function Hero() {
             </div>
           </div>
 
-          <div className="relative order-1 lg:order-2">
-            <div className="relative mx-auto max-w-xs md:max-w-sm">
-              <div className="absolute -inset-5 rounded-[2rem] bg-gradient-to-br from-[#7030EF]/25 via-[#DB1FFF]/20 to-transparent blur-3xl"></div>
+          <div className="relative order-2 max-[380px]:absolute max-[380px]:right-4 max-[380px]:top-28">
+            <div className="relative mx-auto max-w-[190px] max-[380px]:w-[104px] sm:max-w-xs md:max-w-sm">
+              <div className="absolute -inset-3 rounded-[1.5rem] bg-gradient-to-br from-[#7030EF]/25 via-[#DB1FFF]/20 to-transparent blur-2xl sm:-inset-5 sm:rounded-[2rem] sm:blur-3xl"></div>
 
-              <div className="relative rounded-[2rem] border border-white/10 bg-white/5 p-2.5 shadow-2xl shadow-[#7030EF]/20 backdrop-blur-sm">
-                <div className="relative aspect-[4/5] overflow-hidden rounded-[1.5rem] bg-[#090820]">
+              <div className="relative rounded-[1.5rem] border border-white/10 bg-white/5 p-2 shadow-2xl shadow-[#7030EF]/20 backdrop-blur-sm max-[380px]:rounded-2xl max-[380px]:p-1.5 sm:rounded-[2rem] sm:p-2.5">
+                <div className="relative aspect-[4/5] overflow-hidden rounded-[1.1rem] bg-[#090820] max-[380px]:rounded-xl sm:rounded-[1.5rem]">
                   <Image
                     src="/Upasana.jpeg"
                     alt="Upasana Patil"
@@ -188,44 +189,44 @@ export default function Hero() {
                       aria-hidden="true"
                     />
                   </div>
-                  <div className="absolute inset-x-0 bottom-0 z-20 bg-gradient-to-t from-[#090820]/90 via-[#090820]/20 to-transparent p-5">
-                    <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/10 px-3 py-1 text-sm font-medium text-white backdrop-blur-md">
+                  <div className="absolute inset-x-0 bottom-0 z-20 bg-gradient-to-t from-[#090820]/90 via-[#090820]/20 to-transparent p-3 max-[380px]:hidden sm:p-5">
+                    <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/10 px-2.5 py-1 text-xs font-medium text-white backdrop-blur-md sm:px-3 sm:text-sm">
                       <span className="h-2 w-2 rounded-full bg-green-400"></span>
                       MERN Developer
                     </div>
                   </div>
                 </div>
 
-                <div className="mt-3 grid grid-cols-3 gap-2.5">
-                  <div className="rounded-xl border border-white/10 bg-[#090820]/60 p-2.5 text-center">
-                    <div className="bg-gradient-to-r from-[#7030EF] to-[#DB1FFF] bg-clip-text text-xl font-bold text-transparent">
+                {/* <div className="mt-2 grid grid-cols-3 gap-2 max-[380px]:hidden sm:mt-3 sm:gap-2.5">
+                  <div className="rounded-xl border border-white/10 bg-[#090820]/60 p-2 text-center sm:p-2.5"> */}
+                    {/* <div className="bg-gradient-to-r from-[#7030EF] to-[#DB1FFF] bg-clip-text text-base font-bold text-transparent sm:text-xl">
                       2+
                     </div>
-                    <div className="text-[11px] text-white/45">Years Code</div>
+                    <div className="text-[9px] leading-tight text-white/45 sm:text-[11px]">Years Code</div>
                   </div>
-                  <div className="rounded-xl border border-white/10 bg-[#090820]/60 p-2.5 text-center">
-                    <div className="bg-gradient-to-r from-[#7030EF] to-[#DB1FFF] bg-clip-text text-xl font-bold text-transparent">
+                  <div className="rounded-xl border border-white/10 bg-[#090820]/60 p-2 text-center sm:p-2.5">
+                    <div className="bg-gradient-to-r from-[#7030EF] to-[#DB1FFF] bg-clip-text text-base font-bold text-transparent sm:text-xl">
                       10+
                     </div>
-                    <div className="text-[11px] text-white/45">Projects</div>
+                    <div className="text-[9px] leading-tight text-white/45 sm:text-[11px]">Projects</div>
                   </div>
-                  <div className="rounded-xl border border-white/10 bg-[#090820]/60 p-2.5 text-center">
-                    <div className="bg-gradient-to-r from-[#7030EF] to-[#DB1FFF] bg-clip-text text-xl font-bold text-transparent">
+                  <div className="rounded-xl border border-white/10 bg-[#090820]/60 p-2 text-center sm:p-2.5">
+                    <div className="bg-gradient-to-r from-[#7030EF] to-[#DB1FFF] bg-clip-text text-base font-bold text-transparent sm:text-xl">
                       5+
-                    </div>
-                    <div className="text-[11px] text-white/45">Clients</div>
-                  </div>
-                </div>
+                    </div> */}
+                    {/* <div className="text-[9px] leading-tight text-white/45 sm:text-[11px]">Clients</div> */}
+                  {/* </div>
+                </div> */}
               </div>
 
-              <div className="absolute -right-3 top-7 z-30 grid h-12 w-12 place-items-center rounded-2xl border border-white/10 bg-[#7030EF]/25 text-[#B58CFF] shadow-lg shadow-[#7030EF]/20 backdrop-blur-sm">
-                <SiReact className="h-6 w-6" aria-hidden="true" />
+              <div className="absolute -right-2 top-5 z-30 grid h-9 w-9 place-items-center rounded-xl border border-white/10 bg-[#7030EF]/25 text-[#B58CFF] shadow-lg shadow-[#7030EF]/20 backdrop-blur-sm max-[380px]:-right-1 max-[380px]:top-3 max-[380px]:h-7 max-[380px]:w-7 sm:-right-3 sm:top-7 sm:h-12 sm:w-12 sm:rounded-2xl">
+                <SiReact className="h-4 w-4 sm:h-6 sm:w-6" aria-hidden="true" />
               </div>
-              <div className="absolute -left-3 bottom-24 z-30 grid h-12 w-12 place-items-center rounded-2xl border border-white/10 bg-[#DB1FFF]/20 text-[#F0A6FF] shadow-lg shadow-[#DB1FFF]/20 backdrop-blur-sm">
-                <SiNextdotjs className="h-6 w-6" aria-hidden="true" />
+              <div className="absolute -left-2 bottom-16 z-30 grid h-9 w-9 place-items-center rounded-xl border border-white/10 bg-[#DB1FFF]/20 text-[#F0A6FF] shadow-lg shadow-[#DB1FFF]/20 backdrop-blur-sm max-[380px]:-left-1 max-[380px]:bottom-4 max-[380px]:h-7 max-[380px]:w-7 sm:-left-3 sm:bottom-24 sm:h-12 sm:w-12 sm:rounded-2xl">
+                <SiNextdotjs className="h-4 w-4 sm:h-6 sm:w-6" aria-hidden="true" />
               </div>
-              <div className="absolute -right-4 bottom-20 z-30 grid h-10 w-10 place-items-center rounded-2xl border border-white/10 bg-white/10 text-white/75 shadow-lg backdrop-blur-sm">
-                <FiSmartphone className="h-4 w-4" aria-hidden="true" />
+              <div className="absolute -right-3 bottom-14 z-30 grid h-8 w-8 place-items-center rounded-xl border border-white/10 bg-white/10 text-white/75 shadow-lg backdrop-blur-sm max-[380px]:hidden sm:-right-4 sm:bottom-20 sm:h-10 sm:w-10 sm:rounded-2xl">
+                <FiSmartphone className="h-3.5 w-3.5 sm:h-4 sm:w-4" aria-hidden="true" />
               </div>
             </div>
           </div>
