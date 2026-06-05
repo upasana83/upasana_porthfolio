@@ -166,7 +166,7 @@ export default function Hero() {
             </div>
           </div>
 
-          <div className="relative order-2 max-[380px]:absolute max-[380px]:right-4 max-[380px]:top-28">
+          <div className="relative order-2 max-[380px]:absolute max-[340px]:right-4 max-[380px]:top-28">
             <div className="relative mx-auto max-w-[190px] max-[380px]:w-[104px] sm:max-w-xs md:max-w-sm">
               <div className="absolute -inset-3 rounded-[1.5rem] bg-gradient-to-br from-[#7030EF]/25 via-[#DB1FFF]/20 to-transparent blur-2xl sm:-inset-5 sm:rounded-[2rem] sm:blur-3xl"></div>
 
