@@ -64,10 +64,10 @@ export default function Hero() {
   }, []);
 
   return (
-    <section
-      id="home"
-      className="relative flex min-h-screen items-center overflow-hidden bg-[#090820] pt-20 sm:pt-24"
-    >
+<section
+  id="home"
+  className="relative flex min-h-[85vh] lg:min-h-screen items-center overflow-hidden bg-[#090820] pt-6 sm:pt-12"
+>
       <div className="absolute left-0 top-0 h-96 w-96 -translate-x-1/2 -translate-y-1/2 rounded-full bg-gradient-to-r from-[#7030EF]/20 to-[#DB1FFF]/20 blur-3xl"></div>
       <div className="absolute bottom-0 right-0 h-96 w-96 translate-x-1/2 translate-y-1/2 rounded-full bg-gradient-to-l from-[#DB1FFF]/20 to-[#7030EF]/20 blur-3xl"></div>
       <div className="absolute left-1/2 top-1/2 h-[800px] w-[800px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-gradient-to-r from-[#7030EF]/10 to-[#DB1FFF]/10 blur-3xl"></div>
@@ -82,7 +82,7 @@ export default function Hero() {
       ></div>
 
       <div className="relative z-10 mx-auto w-full max-w-7xl px-4 py-5 sm:px-6 sm:py-12 md:py-20 lg:px-8">
-        <div className="grid grid-cols-1 items-center gap-4 sm:gap-10 lg:grid-cols-2 lg:gap-20">
+       <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-8 lg:gap-20">
           <div className="order-1 text-left">
             <div className="mb-2 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1.5 backdrop-blur-sm sm:mb-6 sm:px-4 sm:py-2">
               <span className="h-2 w-2 animate-pulse rounded-full bg-green-500"></span>
@@ -167,7 +167,7 @@ export default function Hero() {
           </div>
 
           <div className="relative order-2 max-[380px]:absolute max-[380px]:right-4 max-[380px]:top-28">
-            <div className="relative mx-auto max-w-[190px] max-[380px]:w-[104px] sm:max-w-xs md:max-w-sm">
+            <div className="relative mx-auto w-[220px] sm:w-[260px] md:w-[320px]">
               <div className="absolute -inset-3 rounded-[1.5rem] bg-gradient-to-br from-[#7030EF]/25 via-[#DB1FFF]/20 to-transparent blur-2xl sm:-inset-5 sm:rounded-[2rem] sm:blur-3xl"></div>
 
               <div className="relative rounded-[1.5rem] border border-white/10 bg-white/5 p-2 shadow-2xl shadow-[#7030EF]/20 backdrop-blur-sm max-[380px]:rounded-2xl max-[380px]:p-1.5 sm:rounded-[2rem] sm:p-2.5">
