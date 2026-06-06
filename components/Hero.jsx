@@ -7,7 +7,6 @@ import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 import {
   FiArrowRight,
   FiBriefcase,
-  FiCode,
   FiInfo,
   FiSmartphone,
 } from "react-icons/fi";
@@ -64,14 +63,16 @@ export default function Hero() {
   }, []);
 
   return (
-<section
-  id="home"
-  className="relative flex min-h-[85vh] lg:min-h-screen items-center overflow-hidden bg-[#090820] pt-6 sm:pt-12"
->
-      <div className="absolute left-0 top-0 h-96 w-96 -translate-x-1/2 -translate-y-1/2 rounded-full bg-gradient-to-r from-[#7030EF]/20 to-[#DB1FFF]/20 blur-3xl"></div>
-      <div className="absolute bottom-0 right-0 h-96 w-96 translate-x-1/2 translate-y-1/2 rounded-full bg-gradient-to-l from-[#DB1FFF]/20 to-[#7030EF]/20 blur-3xl"></div>
-      <div className="absolute left-1/2 top-1/2 h-[800px] w-[800px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-gradient-to-r from-[#7030EF]/10 to-[#DB1FFF]/10 blur-3xl"></div>
+    <section
+      id="home"
+      className="relative flex min-h-screen items-center overflow-hidden bg-[#090820] py-8 sm:py-12"
+    >
+      {/* Background gradient orbs */}
+      <div className="absolute left-0 top-0 h-64 w-64 -translate-x-1/2 -translate-y-1/2 rounded-full bg-gradient-to-r from-[#7030EF]/20 to-[#DB1FFF]/20 blur-3xl sm:h-96 sm:w-96"></div>
+      <div className="absolute bottom-0 right-0 h-64 w-64 translate-x-1/2 translate-y-1/2 rounded-full bg-gradient-to-l from-[#DB1FFF]/20 to-[#7030EF]/20 blur-3xl sm:h-96 sm:w-96"></div>
+      <div className="absolute left-1/2 top-1/2 h-[500px] w-[500px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-gradient-to-r from-[#7030EF]/10 to-[#DB1FFF]/10 blur-3xl sm:h-[800px] sm:w-[800px]"></div>
 
+      {/* Dot pattern overlay */}
       <div
         className="absolute inset-0"
         style={{
@@ -81,163 +82,137 @@ export default function Hero() {
         }}
       ></div>
 
-      <div className="relative z-10 mx-auto w-full max-w-7xl px-4 py-5 sm:px-6 sm:py-12 md:py-20 lg:px-8">
-       <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-8 lg:gap-20">
-          <div className="order-1 text-left">
-            <div className="mb-2 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1.5 backdrop-blur-sm sm:mb-6 sm:px-4 sm:py-2">
+      <div className="relative z-10 mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
+        {/* Desktop-like two-column grid on all screen sizes */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-12 items-center">
+          {/* Left column - Text content */}
+          <div className="text-left w-full">
+            <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1.5 backdrop-blur-sm sm:mb-6">
               <span className="h-2 w-2 animate-pulse rounded-full bg-green-500"></span>
               <span className="text-xs font-medium text-white/70 sm:text-sm">
                 Available for work
               </span>
             </div>
 
-            <div className="mb-1.5 sm:mb-4">
+            <div className="mb-2">
               <span className="text-xs font-medium uppercase tracking-wider text-white/50 sm:text-sm md:text-base">
                 Welcome to my portfolio
               </span>
             </div>
 
-            <h1 className="mb-2 text-[2rem] font-bold leading-tight max-[380px]:pr-[118px] max-[380px]:text-[1.65rem] sm:mb-4 sm:text-4xl md:text-5xl lg:text-7xl">
+            <h1 className="mb-3 text-2xl font-bold leading-tight sm:mb-4 sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl">
               <span className="text-white">Hi, I&apos;m </span>
-              <span className="bg-gradient-to-r from-[#7030EF] to-[#DB1FFF] bg-clip-text text-transparent">
+              <span className="whitespace-nowrap bg-gradient-to-r from-[#7030EF] to-[#DB1FFF] bg-clip-text text-transparent">
                 Upasana Patil
               </span>
             </h1>
 
-            <div className="mb-2 min-h-8 max-[380px]:pr-[118px] sm:mb-6 sm:min-h-12">
-              <p className="text-base font-medium leading-snug text-white/80 sm:text-xl md:text-2xl">
+            {/* Typed text container */}
+            <div className="mb-3 min-h-[3rem] sm:mb-6 sm:min-h-[4rem]">
+              <p className="text-sm font-medium leading-snug text-white/80 sm:text-base md:text-xl">
                 I&apos;m a{" "}
-                <span className="bg-gradient-to-r from-[#7030EF] to-[#DB1FFF] bg-clip-text font-semibold text-transparent">
+                <span className="inline-block bg-gradient-to-r from-[#7030EF] to-[#DB1FFF] bg-clip-text font-semibold text-transparent">
                   {typedText}
                 </span>
-                <span className="animate-pulse text-[#DB1FFF]">|</span>
+                <span className="inline-block animate-pulse text-[#DB1FFF]">|</span>
               </p>
             </div>
 
-            <div className="mb-3 flex max-w-xl items-start gap-2 sm:mb-8 sm:gap-3">
+            <div className="mb-4 flex max-w-xl items-start gap-2 sm:mb-8 sm:gap-3">
               <div className="mt-1 shrink-0 text-[#DB1FFF]">
                 <FiInfo className="h-4 w-4 sm:h-5 sm:w-5" aria-hidden="true" />
               </div>
-             <p className="text-sm leading-relaxed text-white/60 max-[380px]:line-clamp-3 sm:text-base md:text-lg">
-  Currently working as a{" "}
-  <span className="font-semibold text-white">MERN Stack Developer</span>,
-  specializing in building scalable web applications using React,
-  Next.js, Node.js, Express.js, and MongoDB with a strong focus on
-  performance, user experience, and clean architecture.
-</p>
+              <p className="text-xs leading-relaxed text-white/60 sm:text-sm md:text-base">
+                Currently working as a{" "}
+                <span className="font-semibold text-white">MERN Stack Developer</span>,
+                specializing in building scalable web applications using React,
+                Next.js, Node.js, Express.js, and MongoDB with a strong focus on
+                performance, user experience, and clean architecture.
+              </p>
             </div>
 
-            <div className="mb-0 flex flex-wrap gap-3 sm:mb-8 sm:gap-4">
+            <div className="mb-6 flex flex-wrap gap-3 sm:mb-8 sm:gap-4">
               <Link
                 href="#contact"
-                className="group flex items-center gap-2 rounded-lg bg-gradient-to-r from-[#7030EF] to-[#DB1FFF] px-5 py-2.5 text-sm font-medium text-white transition-all duration-300 hover:shadow-lg hover:shadow-[#7030EF]/25 sm:px-8 sm:py-3 sm:text-base"
+                className="group flex items-center gap-2 rounded-lg bg-gradient-to-r from-[#7030EF] to-[#DB1FFF] px-4 py-2 text-xs font-medium text-white transition-all duration-300 hover:shadow-lg hover:shadow-[#7030EF]/25 sm:px-6 sm:py-2.5 sm:text-sm md:px-8 md:py-3 md:text-base"
               >
                 <span>Let&apos;s Connect</span>
                 <FiArrowRight
-                  className="h-4 w-4 transition-transform group-hover:translate-x-1"
+                  className="h-3 w-3 transition-transform group-hover:translate-x-1 sm:h-4 sm:w-4"
                   aria-hidden="true"
                 />
               </Link>
               <Link
                 href="#projects"
-                className="group flex items-center gap-2 rounded-lg border border-white/10 bg-white/5 px-5 py-2.5 text-sm font-medium text-white/80 backdrop-blur-sm transition-all duration-300 hover:border-[#7030EF]/30 hover:bg-white/10 sm:px-8 sm:py-3 sm:text-base"
+                className="group flex items-center gap-2 rounded-lg border border-white/10 bg-white/5 px-4 py-2 text-xs font-medium text-white/80 backdrop-blur-sm transition-all duration-300 hover:border-[#7030EF]/30 hover:bg-white/10 sm:px-6 sm:py-2.5 sm:text-sm md:px-8 md:py-3 md:text-base"
               >
                 <span>View Projects</span>
-                <FiBriefcase className="h-4 w-4" aria-hidden="true" />
+                <FiBriefcase className="h-3 w-3 sm:h-4 sm:w-4" aria-hidden="true" />
               </Link>
             </div>
 
-            <div className="hidden items-center gap-4 sm:flex">
-              <span className="text-sm text-white/40">Find me on:</span>
+            <div className="flex items-center gap-4">
+              <span className="text-xs text-white/40 sm:text-sm">Find me on:</span>
               {socials.map((social) => {
                 const Icon = social.icon;
-
                 return (
                   <Link
                     key={social.name}
                     href={social.href}
-                    className="grid h-9 w-9 place-items-center rounded-full border border-white/10 bg-white/5 text-white/50 transition-colors hover:border-[#DB1FFF]/40 hover:text-[#DB1FFF]"
+                    className="grid h-8 w-8 place-items-center rounded-full border border-white/10 bg-white/5 text-white/50 transition-colors hover:border-[#DB1FFF]/40 hover:text-[#DB1FFF] sm:h-9 sm:w-9"
                     aria-label={social.name}
                   >
-                    <Icon className="h-4 w-4" aria-hidden="true" />
+                    <Icon className="h-3.5 w-3.5 sm:h-4 sm:w-4" aria-hidden="true" />
                   </Link>
                 );
               })}
             </div>
           </div>
 
-          <div className="relative order-2 max-[380px]:absolute max-[380px]:right-4 max-[380px]:top-28">
-            <div className="relative mx-auto w-[220px] sm:w-[260px] md:w-[320px]">
-              <div className="absolute -inset-3 rounded-[1.5rem] bg-gradient-to-br from-[#7030EF]/25 via-[#DB1FFF]/20 to-transparent blur-2xl sm:-inset-5 sm:rounded-[2rem] sm:blur-3xl"></div>
+          {/* Right column - Image with floating icons */}
+          <div className="relative flex justify-center w-full">
+            <div className="relative w-[160px] h-[200px] sm:w-[200px] sm:h-[250px] md:w-[260px] md:h-[320px] lg:w-[350px] lg:h-[440px] xl:w-[400px] xl:h-[500px]">
+              {/* Glow effect behind image */}
+              <div className="absolute -inset-3 rounded-[1.5rem] bg-gradient-to-br from-[#7030EF]/25 via-[#DB1FFF]/20 to-transparent blur-3xl sm:-inset-4 sm:rounded-[2rem]"></div>
 
-              <div className="relative rounded-[1.5rem] border border-white/10 bg-white/5 p-2 shadow-2xl shadow-[#7030EF]/20 backdrop-blur-sm max-[380px]:rounded-2xl max-[380px]:p-1.5 sm:rounded-[2rem] sm:p-2.5">
-                <div className="relative aspect-[4/5] overflow-hidden rounded-[1.1rem] bg-[#090820] max-[380px]:rounded-xl sm:rounded-[1.5rem]">
+              {/* Main image card */}
+              <div className="relative h-full w-full rounded-[1.5rem] border border-white/10 bg-white/5 p-1.5 shadow-2xl shadow-[#7030EF]/20 backdrop-blur-sm sm:p-2 sm:rounded-[2rem]">
+                <div className="relative h-full w-full overflow-hidden rounded-[1rem] sm:rounded-[1.5rem]">
                   <Image
                     src="/Upasana.jpeg"
                     alt="Upasana Patil"
                     fill
                     priority
-                    sizes="(min-width: 1024px) 24rem, (min-width: 768px) 20rem, 90vw"
-                    className="z-10 object-cover object-center"
-                    onError={(event) => {
-                      event.currentTarget.style.display = "none";
-                    }}
+                    sizes="(max-width: 640px) 160px, (max-width: 768px) 200px, (max-width: 1024px) 260px, 350px"
+                    className="object-cover object-center"
                   />
-                  <div className="flex h-full w-full items-center justify-center bg-gradient-to-br from-[#7030EF]/20 to-[#DB1FFF]/20">
-                    <FiCode
-                      className="h-24 w-24 text-white/30"
-                      aria-hidden="true"
-                    />
-                  </div>
-                  <div className="absolute inset-x-0 bottom-0 z-20 bg-gradient-to-t from-[#090820]/90 via-[#090820]/20 to-transparent p-3 max-[380px]:hidden sm:p-5">
-                    <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/10 px-2.5 py-1 text-xs font-medium text-white backdrop-blur-md sm:px-3 sm:text-sm">
-                      <span className="h-2 w-2 rounded-full bg-green-400"></span>
+
+                  {/* Badge on image */}
+                  <div className="absolute bottom-1 left-1 z-20 sm:bottom-2 sm:left-2 md:bottom-3 md:left-3">
+                    <div className="inline-flex items-center gap-1 rounded-full border border-white/10 bg-white/10 px-1.5 py-0.5 text-[8px] text-white backdrop-blur-md sm:gap-1.5 sm:px-2 sm:py-0.5 sm:text-[10px] md:gap-2 md:px-3 md:py-1 md:text-xs">
+                      <span className="h-1 w-1 rounded-full bg-green-400 sm:h-1.5 sm:w-1.5 md:h-2 md:w-2"></span>
                       MERN Developer
                     </div>
                   </div>
                 </div>
-
-                {/* <div className="mt-2 grid grid-cols-3 gap-2 max-[380px]:hidden sm:mt-3 sm:gap-2.5">
-                  <div className="rounded-xl border border-white/10 bg-[#090820]/60 p-2 text-center sm:p-2.5"> */}
-                    {/* <div className="bg-gradient-to-r from-[#7030EF] to-[#DB1FFF] bg-clip-text text-base font-bold text-transparent sm:text-xl">
-                      2+
-                    </div>
-                    <div className="text-[9px] leading-tight text-white/45 sm:text-[11px]">Years Code</div>
-                  </div>
-                  <div className="rounded-xl border border-white/10 bg-[#090820]/60 p-2 text-center sm:p-2.5">
-                    <div className="bg-gradient-to-r from-[#7030EF] to-[#DB1FFF] bg-clip-text text-base font-bold text-transparent sm:text-xl">
-                      10+
-                    </div>
-                    <div className="text-[9px] leading-tight text-white/45 sm:text-[11px]">Projects</div>
-                  </div>
-                  <div className="rounded-xl border border-white/10 bg-[#090820]/60 p-2 text-center sm:p-2.5">
-                    <div className="bg-gradient-to-r from-[#7030EF] to-[#DB1FFF] bg-clip-text text-base font-bold text-transparent sm:text-xl">
-                      5+
-                    </div> */}
-                    {/* <div className="text-[9px] leading-tight text-white/45 sm:text-[11px]">Clients</div> */}
-                  {/* </div>
-                </div> */}
               </div>
 
-              <div className="absolute -right-2 top-5 z-30 grid h-9 w-9 place-items-center rounded-xl border border-white/10 bg-[#7030EF]/25 text-[#B58CFF] shadow-lg shadow-[#7030EF]/20 backdrop-blur-sm max-[380px]:-right-1 max-[380px]:top-3 max-[380px]:h-7 max-[380px]:w-7 sm:-right-3 sm:top-7 sm:h-12 sm:w-12 sm:rounded-2xl">
-                <SiReact className="h-4 w-4 sm:h-6 sm:w-6" aria-hidden="true" />
+              {/* Floating tech icons */}
+              <div className="absolute -right-2 top-4 z-30 grid h-7 w-7 place-items-center rounded-lg border border-white/10 bg-[#7030EF]/25 text-[#B58CFF] backdrop-blur-sm sm:-right-3 sm:top-6 sm:h-8 sm:w-8 sm:rounded-xl md:h-10 md:w-10">
+                <SiReact className="h-3.5 w-3.5 sm:h-4 sm:w-4 md:h-5 md:w-5" />
               </div>
-              <div className="absolute -left-2 bottom-16 z-30 grid h-9 w-9 place-items-center rounded-xl border border-white/10 bg-[#DB1FFF]/20 text-[#F0A6FF] shadow-lg shadow-[#DB1FFF]/20 backdrop-blur-sm max-[380px]:-left-1 max-[380px]:bottom-4 max-[380px]:h-7 max-[380px]:w-7 sm:-left-3 sm:bottom-24 sm:h-12 sm:w-12 sm:rounded-2xl">
-                <SiNextdotjs className="h-4 w-4 sm:h-6 sm:w-6" aria-hidden="true" />
+
+              <div className="absolute -left-2 bottom-10 z-30 grid h-7 w-7 place-items-center rounded-lg border border-white/10 bg-[#DB1FFF]/20 text-[#F0A6FF] backdrop-blur-sm sm:-left-3 sm:bottom-14 sm:h-8 sm:w-8 sm:rounded-xl md:h-10 md:w-10">
+                <SiNextdotjs className="h-3.5 w-3.5 sm:h-4 sm:w-4 md:h-5 md:w-5" />
               </div>
-              <div className="absolute -right-3 bottom-14 z-30 grid h-8 w-8 place-items-center rounded-xl border border-white/10 bg-white/10 text-white/75 shadow-lg backdrop-blur-sm max-[380px]:hidden sm:-right-4 sm:bottom-20 sm:h-10 sm:w-10 sm:rounded-2xl">
-                <FiSmartphone className="h-3.5 w-3.5 sm:h-4 sm:w-4" aria-hidden="true" />
+
+              <div className="absolute -right-2 bottom-14 z-30 hidden h-7 w-7 place-items-center rounded-lg border border-white/10 bg-white/10 text-white/75 backdrop-blur-sm sm:-right-4 sm:bottom-20 sm:grid sm:h-8 sm:w-8 sm:rounded-xl md:h-10 md:w-10">
+                <FiSmartphone className="h-3 w-3 sm:h-3.5 sm:w-3.5 md:h-4 md:w-4" />
               </div>
             </div>
           </div>
         </div>
       </div>
-
-      <style jsx>{`
-        .animation-delay-1000 {
-          animation-delay: 1s;
-        }
-      `}</style>
     </section>
   );
 }
